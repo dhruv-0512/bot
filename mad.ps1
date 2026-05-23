@@ -1,6 +1,6 @@
 function ask {
     param([string]$msg)
-    $res = irm https://my-bot.onrender.com/chat `
+    $res = irm $res = irm https://bot-qrxb.onrender.com/chat ` `
         -Method POST `
         -ContentType "application/json" `
         -Body "{`"message`": `"$msg`"}"
