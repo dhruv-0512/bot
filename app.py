@@ -31,7 +31,7 @@ def chat():
     return jsonify({"reply": reply})
 @app.route('/')
 def home():
-    return '<img src="/meme.png" style="max-width:100%">'
+    return '<body style="margin:0;background:#fff;display:flex;justify-content:center;align-items:center;height:100vh"><img src="/meme.png" style="max-width:600px;width:100%;border-radius:12px"></body>'
 
 @app.route('/meme.png')
 def meme():
