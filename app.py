@@ -33,7 +33,7 @@ def chat():
 def home():
     return '<img src="/meme.png" style="max-width:100%">'
 
-@app.route('/meme.jpg')
+@app.route('/meme.png')
 def meme():
     return send_from_directory('.', 'meme.png')
 @app.route("/ping")
