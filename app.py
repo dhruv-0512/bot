@@ -29,7 +29,13 @@ def chat():
     reply = res.json()["choices"][0]["message"]["content"]
     history.append({"role": "assistant", "content": reply})
     return jsonify({"reply": reply})
+@app.route('/')
+def home():
+    return '<img src="/meme.jpg" style="max-width:100%">'
 
+@app.route('/meme.jpg')
+def meme():
+    return send_from_directory('.', 'meme.jpg')
 @app.route("/ping")
 def ping():
     return "pong", 200
